@@ -82,6 +82,7 @@ nuxt-app@
 10.2.3
 ```
 </div>
+</details>
 
 <details>
 <summary>add pages</summary>
@@ -126,6 +127,7 @@ export default defineNuxtConfig({
 
 ```
 </div>
+</details>
 
 <details>
 <summary>create Firebase project</summary>
@@ -134,6 +136,7 @@ export default defineNuxtConfig({
 - Log in: https://firebase.google.com/
 - Move to console and create Firebase project
 </div>
+</details>
 
 <details>
 <summary>add web app to Firebase project</summary>
@@ -167,3 +170,4 @@ NUXT_PUBLIC_MESSUREMENT_ID=
 ```
 - make src\plugins\firebase.ts
 </div>
+</details>
