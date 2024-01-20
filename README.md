@@ -2,8 +2,8 @@
 
 |         | version | link                          | 
 | ------- | ------- | ----------------------------- | 
-| Node.js | 20.10.0 | https://nodejs.org/en         | 
 | nvm     | 1.1.11  | https://github.com/nvm-sh/nvm | 
+| Node.js | 20.10.0 | https://nodejs.org/en         | 
 | Vue.js  | 3.4.15  | https://vuejs.org/            | 
 | Nuxt    | 3.9.3   | https://nuxt.com/             | 
 
@@ -72,5 +72,35 @@ nuxt-app@ C:\Users\TaoKawarai\Documents\study\nuxt-firebase-auth\src
   └─┬ @vue/server-renderer@3.4.15
     └── vue@3.4.15 deduped
 
+```
 
+# make pages
+
+```sh
+// at .\src\
+└$ mkdir pages
+```
+
+- src\pages\index.vue
+```diff
++<template>
++  <h1>Index page</h1>
++</template>
+```
+
+- src\pages\mypage.vue
+```diff
++<template>
++  <h1>My page</h1>
++</template>
+```
+
+- src\app.vue
+```diff
+<template>
+  <div>
+-   <NuxtWelcome />
++   <NuxtPage />
+  </div>
+</template>
 ```
