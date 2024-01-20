@@ -171,3 +171,20 @@ NUXT_PUBLIC_MESSUREMENT_ID=
 - make src\plugins\firebase.ts
 </div>
 </details>
+
+<details>
+<summary>add composables and middleware</summary>
+<div>
+
+```sh
+└$ mkdir composables
+```
+- add src\composables\firebaseAuth.ts
+
+```sh
+└$ mkdir middleware
+```
+- add src\middleware\auth.ts
+
+</div>
+</details>
