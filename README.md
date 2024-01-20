@@ -6,6 +6,7 @@
 | Node.js | 20.10.0 | https://nodejs.org/en         | 
 | Vue.js  | 3.4.15  | https://vuejs.org/            | 
 | Nuxt    | 3.9.3   | https://nuxt.com/             | 
+| npm     | 10.2.3  | https://www.npmjs.com/        | 
 
 # make project
 ```sh
@@ -72,9 +73,11 @@ nuxt-app@ C:\Users\TaoKawarai\Documents\study\nuxt-firebase-auth\src
   └─┬ @vue/server-renderer@3.4.15
     └── vue@3.4.15 deduped
 
+└$ npm --version
+10.2.3
 ```
 
-# make pages
+# add pages
 
 ```sh
 // at .\src\
@@ -104,3 +107,17 @@ nuxt-app@ C:\Users\TaoKawarai\Documents\study\nuxt-firebase-auth\src
   </div>
 </template>
 ```
+
+# create Firebase project
+- Log in: https://firebase.google.com/
+
+![Alt text](image.png)
+
+- Move to console
+
+![Alt text](image-1.png)
+![Alt text](image-2.png)
+![Alt text](image-3.png)
+![Alt text](image-4.png)
+![Alt text](image-5.png)
+![Alt text](image-6.png)
