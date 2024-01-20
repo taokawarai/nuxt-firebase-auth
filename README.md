@@ -9,6 +9,10 @@
 | npm                     | 10.2.3  | https://www.npmjs.com/                      | 
 | Firebase Javascript SDK | 10.7.2  | https://github.com/firebase/firebase-js-sdk | 
 
+|      | State Management | get Firebase user               | 
+| ---- | ---------------- | ------------------------------- | 
+| src  | ref              | onAuthStateChanged              | 
+
 <details>
 <summary>make project</summary>
 <div>
