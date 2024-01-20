@@ -1,12 +1,13 @@
 # nuxt-firebase-auth
 
-|         | version | link                          | 
-| ------- | ------- | ----------------------------- | 
-| nvm     | 1.1.11  | https://github.com/nvm-sh/nvm | 
-| Node.js | 20.10.0 | https://nodejs.org/en         | 
-| Vue.js  | 3.4.15  | https://vuejs.org/            | 
-| Nuxt    | 3.9.3   | https://nuxt.com/             | 
-| npm     | 10.2.3  | https://www.npmjs.com/        | 
+|                         | version | link                                        | 
+| ----------------------- | ------- | ------------------------------------------- | 
+| nvm                     | 1.1.11  | https://github.com/nvm-sh/nvm               | 
+| Node.js                 | 20.10.0 | https://nodejs.org/en                       | 
+| Vue.js                  | 3.4.15  | https://vuejs.org/                          | 
+| Nuxt                    | 3.9.3   | https://nuxt.com/                           | 
+| npm                     | 10.2.3  | https://www.npmjs.com/                      | 
+| Firebase Javascript SDK | 10.7.2  | https://github.com/firebase/firebase-js-sdk | 
 
 # make project
 ```sh
@@ -53,7 +54,8 @@ No
 └$ cd .\src\
 
 └$ npm list vue
-nuxt-app@ C:\Users\TaoKawarai\Documents\study\nuxt-firebase-auth\src
+nuxt-app@ 
+\nuxt-firebase-auth\src
 ├─┬ nuxt@3.9.3
 │ ├─┬ @nuxt/vite-builder@3.9.3
 │ │ ├─┬ @vitejs/plugin-vue-jsx@3.1.0
@@ -108,16 +110,45 @@ nuxt-app@ C:\Users\TaoKawarai\Documents\study\nuxt-firebase-auth\src
 </template>
 ```
 
+- src\nuxt.config.ts
+```diff
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  devtools: { enabled: true },
++ ssr: false,
+})
+
+```
+
 # create Firebase project
 - Log in: https://firebase.google.com/
+- Move to console and create Firebase project
 
-![Alt text](image.png)
+# add web app to Firebase project
+- add web app to Firebase project at console
+- install firebase module
+```
+└$ npm install -D firebase
 
-- Move to console
-
-![Alt text](image-1.png)
-![Alt text](image-2.png)
-![Alt text](image-3.png)
-![Alt text](image-4.png)
-![Alt text](image-5.png)
-![Alt text](image-6.png)
+└$ npm list firebase
+nuxt-app@ 
+\nuxt-firebase-auth\src
+└── firebase@10.7.2
+```
+- add plugins
+```sh
+// at .\src\
+└$ mkdir plugins
+```
+- add runtimeConfig to nuxt.config.ts
+- add .env
+```
+NUXT_PUBLIC_API_KEY=
+NUXT_PUBLIC_AUTH_DOMAIN=
+NUXT_PUBLIC_PROJECT_ID=
+NUXT_PUBLIC_STORAGE_BUCKET=
+NUXT_PUBLIC_MESSAGING_SENDER_ID=
+NUXT_PUBLIC_APP_ID=
+NUXT_PUBLIC_MESSUREMENT_ID=
+```
+- make src\plugins\firebase.ts
