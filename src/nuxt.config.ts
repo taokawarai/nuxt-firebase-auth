@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
   runtimeConfig: {
-    pulic: {
+    public: {
       apiKey: '',
       authDomain: '',
       projectId: '',
