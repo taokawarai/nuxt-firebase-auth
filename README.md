@@ -9,7 +9,10 @@
 | npm                     | 10.2.3  | https://www.npmjs.com/                      | 
 | Firebase Javascript SDK | 10.7.2  | https://github.com/firebase/firebase-js-sdk | 
 
-# make project
+<details>
+<summary>make project</summary>
+<div>
+
 ```sh
 └$ nvm --version
 1.1.11
@@ -78,8 +81,11 @@ nuxt-app@
 └$ npm --version
 10.2.3
 ```
+</div>
 
-# add pages
+<details>
+<summary>add pages</summary>
+<div>
 
 ```sh
 // at .\src\
@@ -119,12 +125,20 @@ export default defineNuxtConfig({
 })
 
 ```
+</div>
 
-# create Firebase project
+<details>
+<summary>create Firebase project</summary>
+<div>
+
 - Log in: https://firebase.google.com/
 - Move to console and create Firebase project
+</div>
 
-# add web app to Firebase project
+<details>
+<summary>add web app to Firebase project</summary>
+<div>
+
 - add web app to Firebase project at console
 - install firebase module
 ```
@@ -152,3 +166,4 @@ NUXT_PUBLIC_APP_ID=
 NUXT_PUBLIC_MESSUREMENT_ID=
 ```
 - make src\plugins\firebase.ts
+</div>
