@@ -13,15 +13,11 @@ export const signInUser = ref<firebaseUser | null>(null);
 export const useAuth = () => {
   // https://firebase.google.com/docs/auth/web/google-signin?hl=ja
   const signIn = async (): Promise<void> => {
-    let user = signInUser;
 
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
 
-    await signInWithPopup(auth, provider).then((result) => {
-      // Sign-in successful.
-      user.value = result.user;
-    }).catch((error) => {
+    await signInWithPopup(auth, provider).catch((error) => {
       // An error happened.
       alert(error.message);
     });
@@ -30,11 +26,8 @@ export const useAuth = () => {
   // https://firebase.google.com/docs/auth/web/google-signin?hl=ja#next_steps
   const signOut = async (): Promise<void> => {
     const auth = getAuth();
-    await firebaseSignOut(auth).then(() => {
-      // Sign-out successful.
-    }).catch((error) => {
+    await firebaseSignOut(auth).catch((error) => {
       // An error happened.
-      console.log(error);
       alert(error.message);
     });
   };
